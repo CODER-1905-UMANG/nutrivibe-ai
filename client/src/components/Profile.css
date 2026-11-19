@@ -1,0 +1,278 @@
+
+.profile-page {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  color: #24352c;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.profile-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.profile-header p {
+  margin: 0;
+  color: #718078;
+  font-size: 14px;
+}
+
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e7f3e9;
+  color: #347b4b;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.profile-section {
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e5ece7;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(32, 66, 45, 0.04);
+}
+
+.profile-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: #315e40;
+  font-size: 19px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.profile-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #47574d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-grid input,
+.profile-grid select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 13px;
+  border: 1px solid #dce5df;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #26382d;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.profile-grid input:focus,
+.profile-grid select:focus {
+  border-color: #4b9560;
+  box-shadow: 0 0 0 3px rgba(75, 149, 96, 0.12);
+}
+
+.profile-grid input:read-only {
+  background: #f5f8f5;
+  color: #718078;
+  cursor: not-allowed;
+}
+
+.bmi-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 12px;
+  background: #edf6ee;
+  color: #347b4b;
+}
+
+.bmi-card span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bmi-card h3 {
+  margin: 7px 0;
+  font-size: 32px;
+}
+
+.bmi-card p {
+  margin: 0;
+  color: #55735e;
+  font-size: 14px;
+}
+
+.profile-save {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 9px;
+  background: #347b4b;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profile-save:hover {
+  background: #28643b;
+}
+
+.profile-save:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.profile-alert {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.profile-alert.error {
+  background: #fff0ef;
+  color: #bd3838;
+}
+
+.profile-alert.success {
+  background: #eaf6ed;
+  color: #287443;
+}
+
+.profile-loading {
+  padding: 60px 20px;
+  text-align: center;
+  color: #718078;
+}
+
+@media (max-width: 650px) {
+  .profile-page {
+    padding: 22px 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 25px;
+  }
+
+  .profile-section {
+    padding: 20px 16px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .profile-save {
+    width: 100%;
+  }
+}
+
+
+/* Daily Calorie Requirements */
+
+.calorie-section {
+  margin-top: 24px;
+}
+
+.calorie-description {
+  color: #718078;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.calorie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.calorie-card {
+  background: #f4f8f5;
+  border: 1px solid #e0ebe2;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calorie-card svg {
+  color: #23945b;
+}
+
+.calorie-card span {
+  color: #627168;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.calorie-card h3 {
+  color: #183d2a;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.calorie-card small {
+  color: #829087;
+  font-size: 12px;
+}
+
+.calorie-target {
+  background: #e9f6ed;
+  border-color: #b9dfc5;
+}
+
+.calorie-target h3 {
+  color: #168348;
+}
+
+.calorie-note,
+.profile-note {
+  color: #78857d;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .calorie-grid {
+    grid-template-columns: 1fr;
+  }
+}
